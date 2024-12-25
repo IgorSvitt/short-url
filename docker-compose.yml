@@ -1,0 +1,12 @@
+services:
+  url_shortener:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8880:80"
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  data:
